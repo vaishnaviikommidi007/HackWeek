@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+h1 {
+    text-align: center;
+    color: #4b5563;
+    margin-bottom: 10px;
+}
+h2 {
+    color: #6b7280;
+    margin-top: 30px;
+    border-left: 5px solid #a5b4fc;
+    padding-left: 10px;
+}
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #6b7280;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #f9fafb;
+    transition: 0.2s;
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: #a5b4fc;
+    box-shadow: 0 0 5px #c7d2fe;
+}
+button {
+    background: #a5b4fc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #818cf8;
+}
+button.secondary {
+    background: #fbcfe8;
+    color: #333;
+}
+
+button.secondary:hover {
+    background: #f9a8d4;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+th {
+    background: #c7d2fe;
+    color: #1f2937;
+    padding: 12px;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+tr:nth-child(even) {
+    background: #f9fafb;
+}
+h3 {
+    color: #4b5563;
+    margin-top: 15px;
+    text-align: center;
+    background: #e0e7ff;
+    padding: 10px;
+    border-radius: 8px;
+}
+hr {
+    border: none;
+    height: 1px;
+    background: #e5e7eb;
+    margin: 30px 0;
+}
+#toast {
+    visibility: hidden;
+    min-width: 200px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#toast.show {
+    visibility: visible;
+}

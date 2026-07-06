@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA & CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>CGPA & SGPA Calculator</h2>
+<label for="rollNo">Roll Number:</label>
+<input type="text" id="rollNo" placeholder="Enter Roll Number" required>
+<br><br>
+<div id="toast"></div>
+<form id="subjectForm">
+
+    <input type="number" id="semester" placeholder="Semester" min="1" max="10">
+
+    <input type="text" id="subject" placeholder="Subject Name">
+
+    <input type="number" id="credits" placeholder="Credits">
+
+    <select id="grade">
+        <option value="">Grade</option>
+        <option value="O">O</option>
+        <option value="A+">A+</option>
+        <option value="A">A</option>
+        <option value="B+">B+</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="F">F</option>
+    </select>
+
+    <button type="button" id="addSubject">Add Subject</button>
+    <button type="button" id="calculateGPA">Calculate GPA</button>
+</form>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Roll No</th>
+            <th>Sem</th>
+            <th>Subject</th>
+            <th>Credits</th>
+            <th>Grade</th>
+            <th>Points</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="subjectTableBody"></tbody>
+</table>
+
+<h3 id="gpaResult"></h3>
+
+<hr>
+<h2>CGPA Calculator</h2>
+
+<form id="cgpaForm">
+
+    <input type="number" id="cgpaSemester" placeholder="Semester">
+    <input type="number" id="semesterGPA" placeholder="GPA">
+    <input type="number" id="semesterCredits" placeholder="Credits">
+
+    <button type="button" id="addSemester">Add Semester</button>
+    <button type="button" id="calculateCGPA">Calculate CGPA</button>
+</form>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Sem</th>
+            <th>GPA</th>
+            <th>Credits</th>
+        </tr>
+    </thead>
+    <tbody id="cgpaTableBody"></tbody>
+</table>
+
+<h3 id="cgpaResult"></h3>
+
+<hr>
+<h2>What If Mode</h2>
+
+<input type="number" id="currentCgpa" placeholder="Current CGPA">
+<input type="number" id="currentCredits" placeholder="Current Credits">
+<input type="number" id="futureSemesters" placeholder="Remaining Semesters">
+<input type="number" id="futureGpa" placeholder="Expected GPA">
+<input type="number" id="futureCredits" placeholder="Credits per Sem">
+
+<button type="button" id="predictCgpa">The  CGPA That You Will Graduate With</button>
+
+<h3 id="predictionResult"></h3>
+
+<script src="script.js"></script>
+
+</body>
+</html>

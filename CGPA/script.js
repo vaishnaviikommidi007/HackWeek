@@ -87,6 +87,31 @@ document.getElementById("addSubject").addEventListener("click", function () {
     document.getElementById("subjectForm").reset();
     showToast("Subject Added");
 });
+document.getElementById("newStudent").addEventListener("click", function () {
+
+    if (confirm("Start a new student? This will clear all data.")) {
+
+        subjects = [];
+        semesters = [];
+        lastDeleted = null;
+
+        localStorage.removeItem("subjects");
+        localStorage.removeItem("semesters");
+
+        renderSubjects();
+        renderSemesters();
+
+        document.getElementById("subjectForm").reset();
+        document.getElementById("cgpaForm").reset();
+        document.getElementById("rollNo").value = "";
+
+        document.getElementById("gpaResult").innerText = "";
+        document.getElementById("cgpaResult").innerText = "";
+        document.getElementById("predictionResult").innerText = "";
+
+        showToast("Ready for a new student!");
+    }
+});
 document.getElementById("calculateGPA").addEventListener("click", function () {
 
     let totalCredits = 0;
